@@ -14,8 +14,7 @@ class Zoho{
      *
      *	@return string authtoken or error
      *	---------------------------------------------------------------------------------------------*/    
-	    public function getAuthToken()
-	    {
+	    public function getAuthToken() {
 			if(!empty($this->username) && !empty($this->password))
 			{
 				$param = "SCOPE=ZohoCRM/crmapi&EMAIL_ID=".$this->username."&PASSWORD=".$this->password;
