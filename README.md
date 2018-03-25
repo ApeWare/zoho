@@ -4,6 +4,7 @@ Provides methods of posting form data to Zoho CRM as a Client or Lead
 ## Usage
 
 ### Generating Auth Token
+```php
   require_once ("zoho.php");
 	$zoho = new Zoho();
 	
@@ -15,8 +16,9 @@ Provides methods of posting form data to Zoho CRM as a Client or Lead
 	   $authToken = $zoho->getAuthToken();
 	   		
 	// do something with $authToken; echo or pass to another method
-	
+```	
 ### Post Form Data to Zoho CRM
+```php
 	require_once ("zoho.php");
 	$zoho = new Zoho();
 	
@@ -36,3 +38,4 @@ Provides methods of posting form data to Zoho CRM as a Client or Lead
 	$xmlResult = $zoho->postData($authToken, $_POST, 'Leads');
 	
 	// Do something with $xmlResult. Profit!
+```
