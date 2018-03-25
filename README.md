@@ -8,11 +8,11 @@ Provides methods of posting form data to Zoho CRM as a Client or Lead
 	$zoho = new Zoho();
 	
 	// set the class vars with the Zoho account credentials
-	   	$zoho->username = "<Zoho Username>";
-	   	$zoho->password = "<Zoho Password>";
+	   $zoho->username = "<Zoho Username>";
+	   $zoho->password = "<Zoho Password>";
 	   	
 	// get the returned AUTH TOKEN
-	   		$authToken = $zoho->getAuthToken();
+	   $authToken = $zoho->getAuthToken();
 	   		
 	// do something with $authToken; echo or pass to another method
 	
@@ -24,13 +24,14 @@ Provides methods of posting form data to Zoho CRM as a Client or Lead
 	/*	This is the expected form $_POST. Can be fewer fields if required. 
 		Edit the $xml var in the postData method to add more fields
 		
-		$_POST = array(		"fName"		=>"John",
-							"lName"		=>"Doe",
-							"email"		=>"jdoe@domain.com",
-							"company"	=>"Some Company",
-							"phone"		=>"407-555-1212",
-							"leadOwner"	=>"Sally Smith",
-						);
+		$_POST = [
+			"fName"		=>"John",
+			"lName"		=>"Doe",
+			"email"		=>"jdoe@domain.com",
+			"company"	=>"Some Company",
+			"phone"		=>"407-555-1212",
+			"leadOwner"	=>"Sally Smith",
+		];
 	*/
 	$xmlResult = $zoho->postData($authToken, $_POST, 'Leads');
 	
